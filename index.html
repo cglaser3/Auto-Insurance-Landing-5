@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auto Insurance Quote</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app"></div>
-  <script src="script.js"></script>
+  <div class="container">
+    <h2>Auto Insurance Quote Form</h2>
+    <form name="auto-insurance" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <input type="hidden" name="form-name" value="auto-insurance" />
+      <input type="text" name="firstName" placeholder="First Name" required />
+      <input type="text" name="lastName" placeholder="Last Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone (10 digits)" pattern="\d{10}" required />
+      <input type="text" name="address" placeholder="Street Address" required />
+      <input type="text" name="city" placeholder="City" required />
+      <input type="text" name="state" placeholder="State" required />
+      <input type="text" name="zip" placeholder="ZIP Code" required />
+      <button type="submit">Get Quote</button>
+    </form>
+  </div>
 </body>
 </html>

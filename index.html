@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto Insurance Quote</title>
+  <title>AI Insurance Advisor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="logo">AI Insurance Advisor</div>
+  </header>
   <div id="app"></div>
+  <form name="quote" id="netlify-form" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="quote" />
+    <input type="text" name="bot-field" />
+  </form>
   <script src="script.js"></script>
 </body>
 </html>

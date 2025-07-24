@@ -3,11 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto Insurance Quote</title>
+  <title>AI Insurance Advisor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="logo">AI Insurance Advisor</div>
+  </header>
   <div id="app"></div>
+  <form name="quote" id="netlify-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="quote" />
+    <input type="text" name="bot-field" />
+
+    <!-- Dummy fields so Netlify/Zapier recognize dynamic inputs -->
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="text" name="dob" />
+    <input type="email" name="email" />
+    <input type="text" name="phone" />
+    <input type="text" name="address" />
+    <input type="text" name="city" />
+    <input type="text" name="state" />
+    <input type="text" name="zip" />
+    <input type="text" name="homeOwnership" />
+
+    <input type="text" name="vehicles0_year" />
+    <input type="text" name="vehicles0_make" />
+    <input type="text" name="vehicles0_model" />
+    <input type="text" name="vehicles0_mileage" />
+
+    <input type="text" name="drivers0_first" />
+    <input type="text" name="drivers0_last" />
+    <input type="text" name="drivers0_dob" />
+    <input type="text" name="drivers0_license" />
+    <input type="text" name="drivers0_gender" />
+    <input type="text" name="drivers0_marital" />
+    <input type="text" name="drivers0_violations" />
+    <input type="text" name="drivers0_defensiveCourse" />
+
+    <input type="text" name="currentInsurance_limits" />
+    <input type="text" name="currentInsurance_company" />
+    <input type="text" name="currentInsurance_timeWithCompany" />
+    <input type="text" name="currentInsurance_currentPremium" />
+    <input type="text" name="currentInsurance_frequency" />
+    <input type="text" name="currentInsurance_vehicleCoverages0_type" />
+    <input type="text" name="currentInsurance_vehicleCoverages0_deductible" />
+  </form>
   <script src="script.js"></script>
 </body>
 </html>

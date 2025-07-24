@@ -3,11 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto Insurance Quote</title>
+  <title>AI Insurance Advisor</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="logo">AI Insurance Advisor</div>
+  </header>
   <div id="app"></div>
+  <form name="quote" id="netlify-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="quote" />
+    <input type="text" name="bot-field" />
+
+    <!-- Dummy fields so Netlify/Zapier recognize dynamic inputs -->
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="text" name="vehicleYear0" />
+    <input type="text" name="vehicleMake0" />
+    <input type="text" name="vehicleModel0" />
+    <input type="text" name="driverFirst0" />
+    <input type="text" name="driverLast0" />
+    <input type="text" name="currentCompany" />
+  </form>
   <script src="script.js"></script>
 </body>
 </html>

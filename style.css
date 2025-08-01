@@ -43,12 +43,7 @@ body::before {
 }
 
 .logo {
-  font-size: 32px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #3b82f6, #9333ea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  height: 40px;
 }
 .hero {
   display: flex;
@@ -182,6 +177,28 @@ fieldset {
 
 .fade-in {
   animation: fadeInUp 0.6s ease forwards;
+}
+
+#progressContainer {
+  margin-top: 20px;
+  background: #f3f3f3;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background: #6a00ff;
+  transition: width 0.5s ease;
+}
+
+#progressStatus {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
 }
 
 @keyframes fadeInUp {

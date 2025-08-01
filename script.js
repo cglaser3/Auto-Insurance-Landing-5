@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="text" name="firstName" placeholder="First Name" required />
         <input type="text" name="lastName" placeholder="Last Name" required />
         <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="phone" placeholder="Phone (10 digits)" required pattern="\d{10}" />
+        <input type="date" name="dob" placeholder="Date of Birth" required />
+        <input type="tel" name="phone" placeholder="Phone (10 digits)" required pattern="[0-9]{10}" />
         <input type="text" name="address" placeholder="Street Address" required />
         <input type="text" name="city" placeholder="City" required />
         <input type="text" name="state" placeholder="State" required />

@@ -483,11 +483,48 @@ document.addEventListener("DOMContentLoaded", () => {
     app.innerHTML = `
       <div class="container">
         <h2>Thank You</h2>
-        ${progressMarkup(5)}
-        <p>Your quote will be emailed to you within the next 20 minutes.</p>
+        <p class="progress">Step 5 of 5</p>
+        <p>Your quote will be emailed to you within the next 15 minutes.</p>
+
+        <div id="progressContainer">
+          <div id="progressBar"></div>
+          <p id="progressStatus">Preparing your quote...</p>
+        </div>
       </div>
     `;
+
+    startProgressBar();
     app.querySelector('.container').classList.add('fade-in');
+  }
+
+  function startProgressBar() {
+    const bar = document.getElementById("progressBar");
+    const status = document.getElementById("progressStatus");
+    const steps = [
+      "Reviewing your drivers...",
+      "Analyzing vehicle coverage...",
+      "Comparing carriers...",
+      "Finding best discounts...",
+      "Finalizing your quote..."
+    ];
+
+    let progress = 0;
+    let stepIndex = 0;
+
+    const interval = setInterval(() => {
+      progress += 1;
+      bar.style.width = progress + "%";
+
+      if (progress % 20 === 0 && stepIndex < steps.length) {
+        status.textContent = steps[stepIndex];
+        stepIndex++;
+      }
+
+      if (progress >= 100) {
+        status.textContent = "Quote is ready and being emailed!";
+        clearInterval(interval);
+      }
+    }, 9000); // 100% in ~15 minutes (9000 ms × 100 = 15 minutes)
   }
 
   const start = document.getElementById('startQuote');
